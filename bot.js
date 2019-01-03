@@ -2,12 +2,10 @@
 const client = new Discord.Client();
 var prefix = "1";
 
-client.on('ready', () => {
-     client.user.setActivity("I Love MoKaF7a",{type: 'WATCHING'})
 
+client.on("ready", () => {
+  console.log("MoKaF7a| Logged in! Server count: ${client.guilds.size}");
 });
-
-
 
 client.on('message', message => {
   if (message.author.bot) return;
