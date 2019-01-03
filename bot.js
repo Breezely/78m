@@ -1,10 +1,10 @@
-﻿﻿const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "1";
-
+const prefix = "-";
 
 client.on("ready", () => {
   console.log("MoKaF7a| Logged in! Server count: ${client.guilds.size}");
+  client.user.setGame(`Say|${prefix}new`);
 });
 
 client.on('message', message => {
