@@ -1,11 +1,18 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "-";
+var prefix = "2";
 
-client.on("ready", () => {
-  console.log("MoKaF7a| Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`Say|${prefix}new`);
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);  
 });
+
+client.on('ready', async() => {
+var server = "509450326923804682"; // ايدي السررفر
+var channel = "509450326923804686";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('**Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , Drak , **')
+    },305);
+})
 
 client.on('message', message => {
   if (message.author.bot) return;
